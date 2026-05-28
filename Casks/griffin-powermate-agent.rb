@@ -4,10 +4,10 @@ cask "griffin-powermate-agent" do
 
   url "https://github.com/jameslockman/Griffin-PowerMate-Driver/releases/download/#{version}/PowerMateAgent-#{version}.dmg"
   name "PowerMate Agent"
-  desc "Driver for the Griffin PowerMate USB controller on modern macOS"
+  desc "Driver for the Griffin PowerMate USB controller on modern Macs"
   homepage "https://github.com/jameslockman/Griffin-PowerMate-Driver"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "PowerMate Agent.app"
 
@@ -18,7 +18,7 @@ cask "griffin-powermate-agent" do
                    
   zap trash: [
     "~/Library/Application Support/PowerMateAgent",
-    "~/Library/Preferences/com.jameslockman.PowerMateAgent.plist",
     "~/Library/Logs/PowerMateAgent",
+    "~/Library/Preferences/com.jameslockman.PowerMateAgent.plist",
   ]
 end
