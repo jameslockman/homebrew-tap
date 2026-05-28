@@ -15,7 +15,8 @@ cask "griffin-powermate-agent" do
     system_command "/usr/bin/xattr",
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/PowerMate Agent.app"],
                    sudo: false
-                   
+  end
+
   zap trash: [
     "~/Library/Application Support/PowerMateAgent",
     "~/Library/Logs/PowerMateAgent",
