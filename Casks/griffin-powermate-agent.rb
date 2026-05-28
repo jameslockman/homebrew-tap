@@ -11,6 +11,11 @@ cask "griffin-powermate-agent" do
 
   app "PowerMate Agent.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/PowerMate Agent.app"],
+                   sudo: false
+                   
   zap trash: [
     "~/Library/Application Support/PowerMateAgent",
     "~/Library/Preferences/com.jameslockman.PowerMateAgent.plist",
