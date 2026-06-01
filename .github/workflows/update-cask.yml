@@ -35,13 +35,13 @@ jobs:
         run: |
           VERSION="${{ steps.vars.outputs.version }}"
           SHA256="${{ steps.vars.outputs.sha256 }}"
-          sed -i "s/version \".*\"/version \"${VERSION}\"/" Casks/griffin-powermate-driver.rb
-          sed -i "s/sha256 \".*\"/sha256 \"${SHA256}\"/" Casks/griffin-powermate-driver.rb
+          sed -i "s/version \".*\"/version \"${VERSION}\"/" Casks/griffin-powermate-agent.rb
+          sed -i "s/sha256 \".*\"/sha256 \"${SHA256}\"/" Casks/griffin-powermate-agent.rb
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Casks/griffin-powermate-driver.rb
-          git commit -m "Update griffin-powermate-driver to ${{ steps.vars.outputs.version }}"
+          git add Casks/griffin-powermate-agent.rb
+          git commit -m "Update griffin-powermate-agent to ${{ steps.vars.outputs.version }}"
           git push
