@@ -15,8 +15,10 @@ on:
 jobs:
   update-cask:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set version and sha256
         id: vars
