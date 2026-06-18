@@ -1,6 +1,6 @@
 cask "griffin-powermate-agent" do
-  version "1.0.14"
-  sha256 "d6c71354e334a0eeddf1f521459f23a9e8e3e5c60c543631ed8e8c2e66cf0cb6"
+  version "1.0.15"
+  sha256 "a31ccf7d97641e0a77462148a428c28a375f070a44aaceb3b945b23245890dd6"
 
   url "https://github.com/jameslockman/Griffin-PowerMate-Driver/releases/download/#{version}/PowerMateAgent-#{version}.dmg"
   name "PowerMate Agent"
